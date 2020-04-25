@@ -1,0 +1,24 @@
+{
+  "name": "ee599_project",
+  "version": "1.0.0",
+  "description": "Website project of EE599",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lding-code/EE599_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lding-code/EE599_Project/issues"
+  },
+  "homepage": "https://github.com/lding-code/EE599_Project#readme"
+}
