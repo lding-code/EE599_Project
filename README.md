@@ -2,9 +2,18 @@
 
 A coding challenge website project.
 
-## Functions
-*Submit coding problems.
+## Features
+- Create and submit new coding problems.
+- Browse list of coding problems with likes and dislikes.
+- Provide code editor and server-side compiling capability.
+- Utilize database for persistent data storage.
+- Server can routinely delete unpopular problems based on likes and dislikes.
+- Minimalist and material design.
 
+## Development tools
+- Frontend platform: Angular (JavaScript, TypeScript, HTML, CSS)
+- Backend platform: NodeJS Express
+- Database: MongoDB
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
