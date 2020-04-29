@@ -22,7 +22,7 @@ export class ProbSolveComponent implements OnInit {
   evaResult = '';
   private evaResultSub: Subscription;
 
-  editorOptions = {theme: 'vs-light', language: 'cpp', fontSize: 16, fontFamily: 'cascadia_coderegular'};
+  editorOptions = {theme: 'vs-light', language: 'cpp', fontSize: 15, fontFamily: 'cascadia_coderegular'};
 
 
   constructor(public probService: ProbService, private activatedRoute: ActivatedRoute) {}

@@ -16,3 +16,7 @@ a {
 .navButton {
   background-color: #0D47A1;
 }
+
+mat-toolbar {
+  z-index: 9;
+}

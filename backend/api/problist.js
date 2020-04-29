@@ -12,44 +12,44 @@ router.get('/', (req, res, next) => {
     });
 });
 
-// router.patch('/like/:id', (req, res, next) => {
-//   console.log('express:patch like probID:[' + req.params.id + ']');
-//   Prob.findById(req.params.id)
-//     .then(docs => {
-//       console.log('current likes:', docs.likes);
-//       const newLikes = docs.likes + 1;
-//       Prob.findByIdAndUpdate({_id: docs._id}, {likes: newLikes}, (err, result) => {
-//         if (err) {
-//           console.log(err);
-//         } else {
-//           console.log('express:update successful');
-//         }
-//       });
-//     });
-// });
-
-// router.patch('/hate/:id', (req, res, next) => {
-//   console.log('express:patch hate (probId:[' + req.params.id + ']');
-//   Prob.findById(req.params.id)
-//     .then(docs => {
-//       console.log('current hates:', docs.hates);
-//       const newHates = docs.hates + 1;
-//       Prob.findByIdAndUpdate({_id: docs._id}, {hates: newHates}, (err, result) => {
-//         if (err) {
-//           console.log(err);
-//         } else {
-//           console.log('express:update successful');
-//         }
-//       });
-//     });
-// });
-
 router.patch('/like/:id', (req, res, next) => {
   console.log('express:patch like probID:[' + req.params.id + ']');
+  Prob.findById(req.params.id)
+    .then(docs => {
+      console.log('current likes:', docs.likes);
+      const newLikes = docs.likes + 1;
+      Prob.findByIdAndUpdate({_id: docs._id}, {likes: newLikes}, (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('express:update successful');
+        }
+      });
+    });
 });
 
 router.patch('/hate/:id', (req, res, next) => {
   console.log('express:patch hate (probId:[' + req.params.id + ']');
+  Prob.findById(req.params.id)
+    .then(docs => {
+      console.log('current hates:', docs.hates);
+      const newHates = docs.hates + 1;
+      Prob.findByIdAndUpdate({_id: docs._id}, {hates: newHates}, (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('express:update successful');
+        }
+      });
+    });
 });
+
+// router.patch('/like/:id', (req, res, next) => {
+//   console.log('express:patch like probID:[' + req.params.id + ']');
+// });
+
+// router.patch('/hate/:id', (req, res, next) => {
+//   console.log('express:patch hate (probId:[' + req.params.id + ']');
+// });
 
 module.exports = router;
