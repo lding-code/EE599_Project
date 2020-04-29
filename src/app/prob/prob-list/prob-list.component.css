@@ -1,0 +1,22 @@
+*{
+  white-space: pre-line;
+}
+
+h2{
+  padding-top: 1rem;
+}
+
+mat-card{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.icon {
+  font-size: 8px;
+}
+
+div {
+  width: 80%;
+  margin: auto;
+}

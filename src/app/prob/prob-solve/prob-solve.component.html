@@ -1,0 +1,58 @@
+<body>
+  <div id="problemPanel">
+    <mat-card>
+      <div id="probTitle">
+      {{probTitle}}
+      </div>
+      <mat-divider></mat-divider>
+      <div id="probDesc">
+      <p>{{probDesc}}</p>
+      </div>
+    </mat-card>
+  </div>
+
+  <div id="editorPanel">
+    <mat-card>
+      <div id="editorHeader">
+        Type your code here:
+      </div>
+      <mat-divider></mat-divider>
+        <ngx-monaco-editor class="codeEditor" name="subCode" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+        <br>
+        <mat-card
+          class="evaResult"
+          *ngIf="evaResult == 'Test Passed!'"
+          style="background-color: #b9f6ca;">
+          <p class="evaText">
+            <mat-icon [inline]="true">
+              check_circle
+            </mat-icon>
+            Test Passed!
+          </p>
+        </mat-card>
+        <mat-card
+          class="evaResult"
+          *ngIf="evaResult == 'Build Failed.' || evaResult == 'Build Completed. Test Failed.'"
+          style="background-color: #ff5252; color: white">
+          <p class="evaText">
+            <mat-icon [inline]="true">
+              error
+            </mat-icon>
+            {{evaResult}}
+          </p>
+        </mat-card>
+        <button
+          id="submitButton"
+          mat-raised-button
+          color="accent"
+          type="submit"
+          style="float: right"
+          (click)="onSubmit()">Submit Code <mat-icon [inline]="true">cloud_upload</mat-icon></button>
+
+    </mat-card>
+
+  </div>
+
+
+</body>
+

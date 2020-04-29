@@ -1,0 +1,93 @@
+<div class="bodyDiv">
+<mat-card id="contentCard">
+ <form (submit)="onAddProb(probForm)" #probForm="ngForm">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input
+            id="titlePanel"
+            matInput type="text"
+            name="title"
+            ngModel
+            required
+            minlength="2"
+            placeholder="Problem Title"
+            #title="ngModel">
+            <mat-error *ngIf="title.invalid">Please enter a valid problem title.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea
+            id="textPanel"
+            matInput
+            rows="15"
+            name="desc"
+            ngModel
+            required
+            minlength="4"
+            placeholder="Problem Description"
+            #desc="ngModel"></textarea>
+            <mat-error *ngIf="desc.invalid">Please enter a valid problem description.</mat-error>
+        </mat-form-field>
+      <div class="editorPanel">
+        <div class="editorHeader">
+          Provide your starter code here:
+        </div>
+        <mat-divider></mat-divider>
+        <ngx-monaco-editor id="starterEditor" class="codeEditor" name="starterCode" [options]="editorOptions" [(ngModel)]="starter"></ngx-monaco-editor>
+      </div>
+      <br>
+      <div class="editorPanel">
+        <div class="editorHeader">
+          Provide your tester code here:
+        </div>
+        <mat-divider></mat-divider>
+        <ngx-monaco-editor id="testerEditor" class="codeEditor" name="testerCode" [options]="editorOptions" [(ngModel)]="tester"></ngx-monaco-editor>
+      </div>
+      <br>
+      <div class="editorPanel">
+        <div class="editorHeader">
+          Type your sample solution here:
+        </div>
+        <mat-divider></mat-divider>
+        <ngx-monaco-editor id="solEditor" class="codeEditor" name="solCode" [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+      </div>
+      <br>
+  <button
+    id = "testRun"
+    mat-raised-button
+    color="accent"
+    type="button"
+    (click)="onTest()">Test Run<mat-icon [inline]="true">play_arrow</mat-icon></button>
+
+    <mat-card
+    class="evaResult"
+    *ngIf="testResult == 'Test Passed!'"
+    style="background-color: #b9f6ca;">
+    <p class="evaText">
+      <mat-icon [inline]="true">
+        check_circle
+      </mat-icon>
+      Test Passed!
+    </p>
+  </mat-card>
+  <mat-card
+    class="evaResult"
+    *ngIf="testResult == 'Build Failed.' || testResult == 'Build Completed. Test Failed.'"
+    style="background-color: #ff5252; color: white">
+    <p class="evaText">
+      <mat-icon [inline]="true">
+        error
+      </mat-icon>
+      {{testResult}}
+    </p>
+  </mat-card>
+  <button
+    id = "submitButton"
+    mat-raised-button
+    color="accent"
+    type="submit"
+    style="float: right">Submit Problem <mat-icon [inline]="true">cloud_upload</mat-icon></button>
+ </form>
+</mat-card>
+</div>
+
