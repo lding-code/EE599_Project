@@ -1,5 +1,11 @@
 # Yuncode
 
+A coding challenge website project.
+
+## Functions
+*Submit coding problems.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 
 ## Development server
