@@ -11,6 +11,7 @@ const probsolve = require('./api/probsolve');
 
 const app = express();
 
+// use mongoose to connect to mongoDB cloud cluster database with provided credentials
 mongoose.connect(
   'mongodb+srv://lei:VROWfivJL07HopT7@cluster0-skeng.mongodb.net/yuncode?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
@@ -19,11 +20,13 @@ mongoose.connect(
   })
   .catch(() => {
     console.log('Database connection failed!');
-  });
+});
 
+// set data parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// use cors middleware to allow CORS
 app.use(cors());
 
 // use apis

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Prob = require('../models/prob');
 
+// route that get all problems from database
 router.get('/', (req, res, next) => {
   Prob.find()
     .then(docs => {
@@ -12,6 +13,7 @@ router.get('/', (req, res, next) => {
     });
 });
 
+// route that updates likes of a problem
 router.patch('/like/:id', (req, res, next) => {
   console.log('express:patch like probID:[' + req.params.id + ']');
   Prob.findById(req.params.id)
@@ -28,6 +30,7 @@ router.patch('/like/:id', (req, res, next) => {
     });
 });
 
+// route that updates hates of a problem
 router.patch('/hate/:id', (req, res, next) => {
   console.log('express:patch hate (probId:[' + req.params.id + ']');
   Prob.findById(req.params.id)

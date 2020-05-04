@@ -1,0 +1,32 @@
+<div style="height: 5rem"></div>
+<div>
+  <mat-accordion multi="true" *ngIf="problist.length > 0">
+    <mat-expansion-panel *ngFor="let prob of problist">
+      <mat-expansion-panel-header>
+        <h2>{{ prob.title}}</h2>
+      </mat-expansion-panel-header>
+      <p>{{ prob.desc }}</p>
+      <mat-action-row>
+        <button mat-button (click)="onLike(prob)">
+          Like
+          <mat-icon style="color:rgb(85, 204, 85)" [inline]="true">
+            thumb_up
+          </mat-icon>
+          {{ prob.likes }}
+        </button>
+        <button mat-button (click)="onHate(prob)">Hate
+          <mat-icon style="color:red" [inline]="true">
+            thumb_down
+          </mat-icon>
+          {{ prob.hates}}
+        </button>
+        <button mat-button (click)="onSolve(prob._id)">Solve <mat-icon style="color:rgb(102, 169, 233)" [inline]="true">play_circle_filled</mat-icon></button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion *ngIf="problist.length===0">
+    <mat-card>
+      <p class="info-text mat-body-1" >No problem added yet</p>
+    </mat-card>
+  </mat-accordion>
+</div>

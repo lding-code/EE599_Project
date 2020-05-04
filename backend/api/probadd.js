@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Prob = require('../models/prob');
 
+// route that submi new problem to database
 router.post('/', (req, res, next) => {
   const prob = new Prob({
     title: req.body.title,

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'cascadia_coderegular';
+  src: url('../../../fonts/cascadia.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  white-space: pre-line;
+}
+
+#problemPanel {
+  position: absolute;
+  padding: 1rem;
+  width: 36%;
+}
+
+#editorPanel {
+  position: absolute;
+  padding: 1rem;
+  width: 61%;
+  right: 0px;
+}
+
+mat-card{
+  background-color: #fafafa;
+  height: 900px;
+}
+
+#probTitle{
+  padding-bottom: 0.5rem;
+  font-size: 24px;
+}
+
+#editorHeader{
+  padding-bottom: 0.5rem;
+  font-size: 24px;
+}
+
+#probDesc{
+  padding-top: 1rem;
+  font-size: 20px;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+.codeEditor {
+  padding-top: 20px;
+  height: 780px;
+}
+
+#submitButton {
+  position: absolute;
+  right: 20px;
+  padding-top: 0.25rem;
+}
+
+.evaResult {
+  justify-content: center;
+  position: absolute;
+  left: 20px;
+  height: 20px;
+  padding-top: 0.25rem;
+}
+
+.evaText {
+  font-size: 20px;
+  padding-top: 0.25rem;
+}
