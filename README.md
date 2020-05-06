@@ -1,8 +1,11 @@
 # Yuncode
 
-A coding challenge website project.
+Author: Lei Ding (USC ID: leid)
+
+This is a coding challenge website project for EE599.
 
 ## Features
+
 - Create and submit new coding problems.
 - Browse list of coding problems with likes and dislikes.
 - Provide code editor and server-side compiling capability.
@@ -11,32 +14,51 @@ A coding challenge website project.
 - Minimalist and material design.
 
 ## Development tools
+
 - Frontend platform: Angular (JavaScript, TypeScript, HTML, CSS)
-- Backend platform: NodeJS Express
-- Database: MongoDB
+- Backend platform: NodeJS (Express library)
+- Database: MongoDB (Mongoose library)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+## Get it running
 
-## Development server
+Since the frontend and the backend are developed separately. Required modules need to be installed separately for each part.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Frontend:**
 
-## Code scaffolding
+Redirect to **frontend** root folder and install required npm modules:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```shell
+npm install
+```
 
-## Build
+Start Angular development server:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```shell
+ng serve
+```
 
-## Running unit tests
+The frontend server will be hosted at port 4200. Navigate to `http://localhost:4200/` for the page view.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Backend:**
 
-## Running end-to-end tests
+Redirect to **backend** root folder and install required npm modules:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```shell
+npm install
+```
 
-## Further help
+Start Express backend server with nodemon for development purpose (defined in package.json):
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```shell
+npm run start:server
+```
+
+The backend server will be hosted at port 3000 by defualt.
+
+## Website structure
+
+The website has three main views: homepage, add-problem page, solve-problem page, with a navigation panel fixed on top with a home button ("Yun://Code") on the left and add problem button ("Add Problem!") on the right.
+
+**homepage view:**
+
+![homepage view](/sample images/homepage.png?raw=true "homepage view")
