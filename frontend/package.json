@@ -26,7 +26,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.9.10",
+    "mongoose": "^5.13.15",
     "ngx-monaco-editor": "^9.0.0",
     "nodemon": "^2.0.3",
     "rxjs": "~6.5.4",
